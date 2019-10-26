@@ -60,12 +60,12 @@ a {
 	text-align: center;
 }
 .social-container {
-	border: 1px solid orange;
+	/* border: 1px solid orange; */
 	margin: 20px 0;
 }
 .social-container a {
 	border: 1px solid #eee;
-	border: 9px solid palegreen;
+	/* border: 9px solid palegreen; */
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -83,7 +83,7 @@ a {
 }
 button {
 	border-radius: 20px;
-	border: 1px solid #ff4b2b;
+	border: 1px solid white;
 	background: #ff4b2b;
 	color: #fff;
 	font-size: 12px;
@@ -114,7 +114,7 @@ button.ghost {
 	width: 50%;
 	z-index: 2;
 }
-.sign-in-container {
+.sign-up-container {
 	left: 0;
 	width: 50%;
 	opacity: 0;
@@ -161,7 +161,35 @@ button.ghost {
 	transform: translateX(0);
 }
 .overlay-left {
-	border: 8px solid purple;
+	/* border: 8px solid purple; */
 
 	transform: translateX(-20%);
+}
+
+/* Animation  */
+
+/* Move signin to the right */
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.container.right-panel-active .overlay-container {
+	transform: translateX(-100%);
+}
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+}
+
+/* Move overlay back to right */
+.container.right-panel-active .overlay {
+	transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+.container.right-panel-active .overlay-left {
+	transform: translateX(20%);
 }
